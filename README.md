@@ -1,2 +1,2 @@
 # StormCloud
-A music application for all
+A music website in working progress
