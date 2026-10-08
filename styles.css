@@ -1,0 +1,110 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(28, 28, 52);
+  color: white;
+  font-family: sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* Header Container (80px Height) */
+.header-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px; /* Set height to 80px */
+  background-color: rgb(28, 28, 52);
+  display: flex;
+  align-items: center; /* Vertically centers children */
+  justify-content: space-between; /* Keeps left, middle, right sections balanced */
+  padding: 0 20px;
+  z-index: 1000;
+}
+
+.header-left,
+.header-right {
+  width: 140px; /* Keeps sides balanced so center section stays in exact middle */
+  display: flex;
+  align-items: center;
+}
+
+/* Resized logo to fit within the 80px header */
+#logo {
+  width: 140px;
+  height: 80px; 
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Centered Search Bar */
+#search-bar {
+  width: 100%;
+  max-width: 500px;
+  height: 38px;
+  background-color: lightgray;
+  border-radius: 30px;
+  margin: 0 auto; /* Horizontally centers the element */
+}
+
+
+#search-glass {
+    color : darkgray;
+    position: fixed;
+    top: 32px;
+    left: 530px;
+}
+
+#search{
+   position: fixed;
+   width: 100%;
+   max-width: 500px;
+   height: 38px; 
+   border-radius: 30px;
+   border: 1px solid lightgray;
+   top:21px; 
+   left:560px; 
+   background-color: lightgray;
+   margin: 0 auto; 
+} 
+
+/* Fixed Navigation Sidebar (Adjusted top offset to match 80px height) */
+nav {
+  position: fixed;
+  top: 80px; /* Starts directly below the 80px bar */
+  left: 10px;
+  width: 200px;
+  height: calc(100vh - 340px);
+  background-color: rgba(22, 22, 42, 0.5);
+  padding: 10px ;
+  overflow-y: hidden;
+  z-index: 900;
+  border-radius: 10px;
+}
+
+a:hover{
+    color: dodgerblue; 
+}
+
+li {
+  margin: 20px 10px;
+}
+
+/* Main Content Area */
+main {
+  margin-top: 80px; /* Clearance for 80px top bar */
+  margin-left: 220px;
+  padding: 20px;
+}
