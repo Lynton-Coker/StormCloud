@@ -1,50 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>StormCloud</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="https://kit.fontawesome.com/ca898dc459.js" crossorigin="anonymous"></script>
-</head>
-<body>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StormCloud</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/ca898dc459.js" crossorigin="anonymous"></script>
+    <script src="script.js" defer></script>
+    </head>
+    <body>
+        <section>
+            <header class="header">
+                <!-- Left side -->
+                <div class="logo">
+                <img class="logo" src="images/logo.png" alt="Logo">
+                </div>
 
-  <!-- Top Fixed Header -->
-  <header class="header-container">
-    <div class="header-left">
-      <img id="logo" src="images/logo2.png" alt="StormCloud logo">
-    </div>
-    
-    <div id="search-wrapper">
-        <i id="search-glass" class="fa-solid fa-magnifying-glass"></i>
-        <input type="text" id="search" placeholder="Search for a song, artist, album...">
-    </div>
-    
-    <!-- Empty spacer to balance header flexbox and keep search bar centered -->
-    <div class="header-right"></div>
-  </header>
+                <div >
+                <button class="karaoke">
+                    <i class="fa-solid fa-microphone"></i>
+                    Karaoke
+                </button>
+                </div>
 
-  <!-- Left Fixed Sidebar Navigation -->
-  <nav>
-    <ul>
-      <li><a href="#Home"><i class="fa-solid fa-house"></i> Home</a></li>
-      <li><a href="#Explore"><i class="fa-solid fa-magnifying-glass"></i> Explore</a></li>
-      <li><a href="#Library"><i class="fa-solid fa-headphones"></i> Library</a></li>
-      <li><a href="#Playlists"><i class="fa-solid fa-list"></i> Playlists</a></li>
-      <li><a href="#Favorites"><i class="fa-regular fa-heart"></i> Favorites</a></li>
-      <li><a href="#Latest releases"><i class="fa-solid fa-fire"></i> Latest releases</a></li>
-      <li><a href="#Artists"><i class="fa-solid fa-user"></i> Artists</a></li>
-      <li><a href="#Albums"><i class="fa-solid fa-compact-disc"></i> Albums</a></li>
-      <li><a href="#Genres"><i class="fa-solid fa-table-cells-large"></i> Genres</a></li>
-    </ul>
-  </nav>  
+                <!-- Center search -->
+                <div class="search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="search" class="search-bar" placeholder="Search for a song, artist, album...">   
+                </div>
+
+                <!-- Right side -->
+                <div class="log-in">
+                    <button class="login">Login</button>
+                </div>
+
+                <div class="sign-up">
+                    <button class="signup">Sign Up</button>
+                </div>
+
+                <div class="notification">
+                    <button class="notifications">
+                        <i class="fa-solid fa-bell"></i>
+                        Notifications
+                    </button>
+                </div>
+
+                <div >
+                    <img src="images/profile.png" class="profile" alt="Profile">
+                </div>
+            </header>
+            <hr>
+        </section> 
+    
+        <section>
+            <nav>
+                <ul class="nav">
+                <li><a href="#Home"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="#Explore"><i class="fa-solid fa-magnifying-glass"></i> Explore</a></li>
+                <li><a href="#Library"><i class="fa-solid fa-headphones"></i> Library</a></li>
+                <li><a href="#Playlists"><i class="fa-solid fa-list"></i> Playlists</a></li>
+                <li><a href="#Favorites"><i class="fa-regular fa-heart"></i> Favorites</a></li>
+                <li><a href="#Latest releases"><i class="fa-solid fa-fire"></i> Latest releases</a></li>
+                <li><a href="#Artists"><i class="fa-solid fa-user"></i> Artists</a></li>
+                <li><a href="#Albums"><i class="fa-solid fa-compact-disc"></i> Albums</a></li>
+                <li><a href="#Genres"><i class="fa-solid fa-table-cells-large"></i> Genres</a></li>
+                </ul>
+            </nav>  
+        </section>
+
+        <section>
+            <main>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+            </main>
+        </section>
+
+        <section>
+            <footer>
+                <div class="playing-image">
+                    <img id="playing-image" src="images/gm.png" alt="Now Playing">
+                </div>
+
+                <div class="play">
+                    <p id="music-title">Good Morning</p>
+                    <p id="artist-name">Kanye West</p>
+                </div>
+                         
+                <div class = "audio-controls">
+                    <i class="fa-solid fa-shuffle"></i>
+                    <i class="fa-solid fa-backward-step"></i>
+                    <i class="fa-solid fa-pause"></i>
+                    <i class="fa-solid fa-forward-step"></i> 
+                    <i class="fa-solid fa-repeat"></i>
   
+                    <input
+                        type="range"
+                        class="seekbar"
+                        min="0"
+                        max="100"
+                        value="0"
+                        aria-label="Music playback progress"
+                    >
+                </div>
+                
+                <div>
+                    <i class="fa-solid fa-bars"></i>
+                </div>
 
-  <!-- Main Content Area -->
-  <main>
-    
-  
-  </main>
+                <div class="volume-control">
+                    <i class="fa-solid fa-volume-high volume-icon"></i>
+                    <input
+                        type="range"
+                        class="volume-bar"
+                        min="0"
+                        max="100"
+                        value="50"
+                        aria-label="Volume"
+                    >
+                </div>
+                
+            </footer>
+        </section>
 
-</body>
+        
+    </body>
 </html>

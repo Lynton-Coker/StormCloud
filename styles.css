@@ -1,110 +1,1171 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+*{
+    box-sizing: border-box;
+    color: white;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0px;
+    padding: 0px;
 }
 
-body {
-  background-color: rgb(28, 28, 52);
-  color: white;
-  font-family: sans-serif;
+body{
+    background-color:  rgb(28, 28, 52);
+}
+
+.header{
+    display: flex;
+    width: 100vw;
+    height: 90px;
+    background: rgb(28, 28, 52);
+    position: fixed;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.logo{
+    max-height: 90px;
+    max-width: 160px;
+}
+
+.karaoke{
+    height: 40px;
+    width: 100px;
+    display: flex;
+    flex: 1;
+    margin-top: 20px;
+    margin-left: 120px;
+    align-items: center;
+    font-size: 16px;
+    padding: 12px;
+    background: linear-gradient(#1c1c34, rgb(195, 103, 154));
+    border: none;
+    border-radius: 28px;
+    outline: none;
+    transition: ease-in-out 0.3s;
+}
+
+.karaoke:hover{
+    color: dodgerblue;
+}
+
+.fa-microphone{
+    background: linear-gradient(  #1c1c34,rgb(195, 103, 154));
+    border: none;
+    border-radius: 50%;
+    outline: none;
+}
+
+.search{
+    width: 500px;
+    max-width: 500px;
+    height: 40px;
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: 200px;
+    align-items: center;
+    padding: 8px 12px;
+    background: lightgray;
+    border: none;
+    border-radius: 28px;
+    outline: none;
+    opacity: 0.8;
+    transition: ease-in-out 0.3s;
+}
+
+
+.search-bar{
+    background: lightgray;
+    margin: auto 0px;
+    margin-left: 8px;
+    outline: none;
+    border: none;
+}
+
+.login{
+    width:max-content;
+    height: 40px;
+    display: flex;
+    flex: 1;
+    border: none;
+    font-size: 16px;
+    padding: 8px 12px;
+    margin-top: 20px;
+    margin-left: 50px;
+    transition: ease-in-out 0.3s;
+}
+
+.signup{
+    width:max-content;
+    height: 40px;
+    display: flex;
+    flex: 1;
+    border: none;
+    border-radius: 24px;
+    background: dodgerblue;
+    font-size: 16px;
+    padding: 8px 12px;
+    margin-top: 20px;
+    margin-left: 50px;
+    transition: ease-in-out 0.3s;
+    
+}
+
+
+.notifications{
+    width:max-content;
+    height: 40px;
+    display: flex;
+    flex: 1;
+    border: none;
+    outline: none;
+    align-items: center;
+    font-size: 16px;
+    padding: 8px 12px;
+    margin-top: 20px;
+    margin-left: 50px;
+    transition: ease-in-out 0.3s;
+}
+
+.profile{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    margin-top: 20px;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+.login, .notifications{
+    background: rgb(28, 28, 52);
+}
+
+
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+
+    .header {
+        display: flex;
+        width: 100%;
+        height: 90px;
+        padding: 0 20px;
+        background: rgb(28, 28, 52);
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+        box-sizing: border-box;
+    }
+
+    .logo {
+        width: auto;
+        max-width: 130px;
+        height: auto;
+        max-height: 75px;
+        object-fit: contain;
+        flex: 0 1 auto;
+    }
+
+    .karaoke {
+        width: max-content;
+        max-width: 110px;
+        height: auto;
+        flex: 0 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+
+        margin: 0;
+        padding: 10px 12px;
+        font-size: 14px;
+        white-space: nowrap;
+
+        background: linear-gradient(
+            #1c1c34,
+            rgb(195, 103, 154)
+        );
+        border: none;
+        border-radius: 28px;
+        outline: none;
+    }
+
+    .fa-microphone {
+        background: transparent;
+        border: none;
+        border-radius: 50%;
+        outline: none;
+        flex-shrink: 0;
+    }
+
+    .search {
+        width: 100%;
+        max-width: auto;
+        min-width: 100px;
+        height: 40px;
+        flex: 1 1 250px;
+
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        margin: 0;
+        padding: 8px 12px;
+
+        background: lightgray;
+        border: none;
+        border-radius: 28px;
+        outline: none;
+        opacity: 0.8;
+        box-sizing: border-box;
+    }
+
+    .search-bar {
+        width: 100%;
+        min-width: 0;
+        height: auto;
+        flex: 1;
+
+        margin: 0;
+        padding: 0;
+
+        background: transparent;
+        color: #333;
+        outline: none;
+        border: none;
+        font-size: 14px;
+    }
+
+    .login {
+        width: max-content;
+        max-width: max-content;
+        height: auto;
+        flex: 0 0 auto;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin: 0;
+        padding: 8px 10px;
+        font-size: 14px;
+        white-space: nowrap;
+
+        border: none;
+    }
+
+    .signup {
+        width: max-content;
+        max-width: max-content;
+        height: auto;
+        flex: 0 0 auto;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin: 0;
+        padding: 8px 12px;
+        font-size: 14px;
+        white-space: nowrap;
+
+        border: none;
+        border-radius: 24px;
+        background: dodgerblue;
+    }
+
+    .notifications {
+        width: max-content;
+        max-width: max-content;
+        height: auto;
+        flex: 0 0 auto;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin: 0;
+        padding: 8px 10px;
+        font-size: 14px;
+        white-space: nowrap;
+
+        border: none;
+        outline: none;
+    }
+
+    .profile {
+        width: 36px;
+        height: 36px;
+        flex: 0 0 36px;
+
+        display: block;
+        object-fit: cover;
+        object-position: center;
+
+        margin: 0;
+        border-radius: 50%;
+    }
+
+
+    /* Footer responsive sizing: preserve the existing element structure. */
+    body footer {
+        gap: 12px;
+        padding: 0 16px;
+    }
+    footer #playing-image {
+        width: 52px;
+        height: 52px;
+        flex: 0 0 52px;
+    }
+    footer #music-title {
+        max-width: 150px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 14px;
+    }
+    footer #artist-name {
+        max-width: 140px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 12px;
+    }
+    footer .audio-controls {
+        position: static;
+        left: auto;
+        bottom: auto;
+        display: block;
+        flex: 1 1 300px;
+        width: auto;
+        min-width: 0;
+        max-width: 360px;
+        margin: 0 auto;
+        text-align: center;
+        white-space: nowrap;
+    }
+
+    footer .fa-shuffle,
+    footer .fa-backward-step,
+    footer .fa-pause,
+    footer .fa-forward-step,
+    footer .fa-repeat {
+        margin-left: 12px;
+        margin-right: 12px;
+        font-size: 14px;
+    }
+    footer .seekbar {
+        max-width: 260px;
+        margin-top: 10px;
+    }
+    footer .volume-control {
+        gap: 7px;
+    }
+    footer .volume-icon {
+        font-size: 14px;
+    }
+    footer .volume-bar {
+        width: 80px;
+    }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+    .header {
+        width: 100%;
+        height: 80px;
+        padding: 0 12px;
+        gap: 10px;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo {
+        width: 100px;
+        max-width: 100px;
+        max-height: 65px;
+        object-fit: contain;
+        flex: 0 0 auto;
+    }
+
+    .karaoke {
+        width: auto;
+        height: 36px;
+        flex: 0 0 auto;
+        margin: 0;
+        padding: 6px 8px;
+        font-size: 13px;
+        white-space: nowrap;
+    }
+
+    .search {
+        width: auto;
+        max-width: 300px;
+        min-width: 80px;
+        height: 36px;
+        flex: 1 1 200px;
+        margin: 0;
+        padding: 7px 10px;
+        display: flex;
+        gap: 6px;
+    }
+
+    .search-bar {
+        flex: 1;
+        width: 100%;
+        min-width: 0;
+        font-size: 13px;
+    }
+
+    .login,
+    .signup,
+    .notifications {
+        width: auto;
+        height: auto;
+        flex: 0 0 auto;
+        margin: 0;
+        padding: 5px 7px;
+        font-size: 12px;
+        white-space: nowrap;
+    }
+
+    .profile {
+        width: 32px;
+        height: 32px;
+        flex: 0 0 32px;
+        margin: 0;
+    }
+
+
+    /* Footer responsive sizing: preserve the existing element structure. */
+    body footer {
+        gap: 8px;
+        padding: 0 12px;
+        height: 66px;
+    }
+    footer #playing-image {
+        width: 46px;
+        height: 46px;
+        flex: 0 0 46px;
+    }
+    footer #music-title {
+        max-width: 105px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 12px;
+    }
+    footer #artist-name {
+        max-width: 95px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 10px;
+    }
+    footer .audio-controls {
+        position: static;
+        left: auto;
+        bottom: auto;
+        display: block;
+        flex: 1 1 300px;
+        width: auto;
+        min-width: 0;
+        max-width: 360px;
+        margin: 0 auto;
+        text-align: center;
+        white-space: nowrap;
+    }
+
+    footer .fa-shuffle,
+    footer .fa-backward-step,
+    footer .fa-pause,
+    footer .fa-forward-step,
+    footer .fa-repeat {
+        margin-left: 7px;
+        margin-right: 7px;
+        font-size: 12px;
+    }
+    footer .seekbar {
+        max-width: 210px;
+        margin-top: 8px;
+    }
+    footer .volume-control {
+        gap: 5px;
+    }
+    footer .volume-icon {
+        font-size: 12px;
+    }
+    footer .volume-bar {
+        width: 58px;
+    }
+
+}
+
+
+@media screen and (min-width: 481px) and (max-width: 767px) {
+
+    .header {
+        width: 100%;
+        height: 70px;
+        padding: 0 8px;
+        gap: 6px;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo {
+        width: 65px;
+        max-width: 65px;
+        max-height: 50px;
+        object-fit: contain;
+        flex: 0 0 65px;
+    }
+
+    .karaoke {
+        width: auto;
+        height: 30px;
+        flex: 0 0 auto;
+        margin: 0;
+        padding: 4px 5px;
+        font-size: 10px;
+        white-space: nowrap;
+    }
+
+    .fa-microphone {
+        font-size: 11px;
+    }
+
+    .search {
+        width: auto;
+        max-width: none;
+        min-width: 40px;
+        height: 32px;
+        flex: 1 1 100px;
+        margin: 0;
+        padding: 5px 7px;
+        display: flex;
+        gap: 4px;
+    }
+
+    .search-bar {
+        flex: 1;
+        width: 100%;
+        min-width: 0;
+        margin: 0;
+        font-size: 11px;
+    }
+
+    .login,
+    .signup,
+    .notifications {
+        width: auto;
+        height: auto;
+        flex: 0 0 auto;
+        margin: 0;
+        padding: 4px 5px;
+        font-size: 10px;
+        white-space: nowrap;
+    }
+
+    .profile {
+        width: 28px;
+        height: 28px;
+        flex: 0 0 28px;
+        margin: 0;
+    }
+
+
+    /* Footer responsive sizing: preserve the existing element structure. */
+    body footer {
+        gap: 5px;
+        padding: 0 8px;
+        height: 62px;
+    }
+    footer #playing-image {
+        width: 38px;
+        height: 38px;
+        flex: 0 0 38px;
+    }
+    footer #music-title {
+        max-width: 72px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 10px;
+    }
+    footer #artist-name {
+        max-width: 68px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 9px;
+    }
+    footer .audio-controls {
+        position: static;
+        left: auto;
+        bottom: auto;
+        display: block;
+        flex: 1 1 300px;
+        width: auto;
+        min-width: 0;
+        max-width: 360px;
+        margin: 0 auto;
+        text-align: center;
+        white-space: nowrap;
+    }
+
+    footer .fa-shuffle,
+    footer .fa-backward-step,
+    footer .fa-pause,
+    footer .fa-forward-step,
+    footer .fa-repeat {
+        margin-left: 3px;
+        margin-right: 3px;
+        font-size: 10px;
+    }
+    footer .seekbar {
+        max-width: 135px;
+        height: 5px;
+        margin-top: 6px;
+    }
+    footer .seekbar::-webkit-slider-thumb {
+        width: 11px;
+        height: 11px;
+    }
+    footer .seekbar::-moz-range-thumb {
+        width: 10px;
+        height: 10px;
+    }
+    footer .volume-control {
+        gap: 3px;
+    }
+    footer .volume-icon {
+        font-size: 10px;
+    }
+    footer .volume-bar {
+        width: 38px;
+        height: 3px;
+    }
+    footer .volume-bar::-webkit-slider-thumb,
+    footer .volume-bar::-moz-range-thumb {
+        width: 8px;
+        height: 8px;
+    }
+
+}
+
+
+@media screen and (min-width: 100px) and (max-width: 480px) {
+
+    .header {
+        width: 100%;
+        height: 60px;
+        padding: 0 5px;
+        gap: 4px;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo {
+        width: 45px;
+        max-width: 45px;
+        max-height: 38px;
+        object-fit: contain;
+        flex: 0 0 45px;
+    }
+
+    .karaoke {
+        width: auto;
+        height: 27px;
+        flex: 0 0 auto;
+        margin: 0;
+        padding: 3px;
+        font-size: 9px;
+        white-space: nowrap;
+    }
+
+    .fa-microphone {
+        font-size: 9px;
+    }
+
+    .search {
+        width: auto;
+        max-width: 90px;
+        min-width: 25px;
+        height: 28px;
+        flex: 1 1 60px;
+        margin: 0;
+        padding: 4px;
+        display: flex;
+        gap: 3px;
+    }
+
+    .search-bar {
+        flex: 1;
+        width: 100%;
+        min-width: 0;
+        margin: 0;
+        font-size: 10px;
+    }
+
+    .login,
+    .signup,
+    .notifications {
+        width: auto;
+        height: auto;
+        flex: 0 0 auto;
+        margin: 0;
+        padding: 3px;
+        font-size: 8px;
+        white-space: nowrap;
+    }
+
+    .profile {
+        width: 24px;
+        height: 24px;
+        flex: 0 0 24px;
+        margin: 0;
+    }
+
+
+    /* Footer responsive sizing: preserve the existing element structure. */
+    body footer {
+        gap: 3px;
+        padding: 0 5px;
+        height: 56px;
+    }
+    footer #playing-image {
+        width: 28px;
+        height: 28px;
+        flex: 0 0 28px;
+    }
+    footer #music-title {
+        max-width: 48px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 8px;
+    }
+    footer #artist-name {
+        max-width: 45px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 7px;
+    }
+    footer .audio-controls {
+        position: static;
+        left: auto;
+        bottom: auto;
+        display: block;
+        flex: 1 1 300px;
+        width: auto;
+        min-width: 0;
+        max-width: 360px;
+        margin: 0 auto;
+        text-align: center;
+        white-space: nowrap;
+    }
+
+    footer .fa-shuffle,
+    footer .fa-backward-step,
+    footer .fa-pause,
+    footer .fa-forward-step,
+    footer .fa-repeat {
+        margin-left: 2px;
+        margin-right: 2px;
+        font-size: 9px;
+    }
+    footer .seekbar {
+        max-width: 90px;
+        height: 4px;
+        margin-top: 4px;
+    }
+    footer .seekbar::-webkit-slider-thumb {
+        width: 9px;
+        height: 9px;
+    }
+    footer .seekbar::-moz-range-thumb {
+        width: 8px;
+        height: 8px;
+    }
+    footer .volume-control {
+        gap: 2px;
+    }
+    footer .volume-icon {
+        font-size: 8px;
+    }
+    footer .volume-bar {
+        width: 24px;
+        height: 3px;
+    }
+    footer .volume-bar::-webkit-slider-thumb,
+    footer .volume-bar::-moz-range-thumb {
+        width: 7px;
+        height: 7px;
+    }
+
+}
+
+.nav {
+  position: fixed;
+  top: 100px;
+  left: 10px;
+  width: 200px;
+  height: calc(ul + 30px);
+  background-color: rgba(22, 22, 42, 0.5);
+  padding: 10px ;
+  border-radius: 10px;
+  
 }
 
 ul {
   list-style-type: none;
 }
 
+li {
+  margin: 15px 10px;
+}
 a {
-  color: #ffffff;
   text-decoration: none;
 }
 
-/* Header Container (80px Height) */
-.header-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 80px; /* Set height to 80px */
-  background-color: rgb(28, 28, 52);
-  display: flex;
-  align-items: center; /* Vertically centers children */
-  justify-content: space-between; /* Keeps left, middle, right sections balanced */
-  padding: 0 20px;
-  z-index: 1000;
+.login:hover, .notifications:hover{
+    color: orange;
 }
 
-.header-left,
-.header-right {
-  width: 140px; /* Keeps sides balanced so center section stays in exact middle */
-  display: flex;
-  align-items: center;
-}
-
-/* Resized logo to fit within the 80px header */
-#logo {
-  width: 140px;
-  height: 80px; 
-  border-radius: 8px;
-  object-fit: cover;
-}
-
-/* Centered Search Bar */
-#search-bar {
-  width: 100%;
-  max-width: 500px;
-  height: 38px;
-  background-color: lightgray;
-  border-radius: 30px;
-  margin: 0 auto; /* Horizontally centers the element */
-}
-
-
-#search-glass {
-    color : darkgray;
-    position: fixed;
-    top: 32px;
-    left: 530px;
-}
-
-#search{
-   position: fixed;
-   width: 100%;
-   max-width: 500px;
-   height: 38px; 
-   border-radius: 30px;
-   border: 1px solid lightgray;
-   top:21px; 
-   left:560px; 
-   background-color: lightgray;
-   margin: 0 auto; 
-} 
-
-/* Fixed Navigation Sidebar (Adjusted top offset to match 80px height) */
-nav {
-  position: fixed;
-  top: 80px; /* Starts directly below the 80px bar */
-  left: 10px;
-  width: 200px;
-  height: calc(100vh - 340px);
-  background-color: rgba(22, 22, 42, 0.5);
-  padding: 10px ;
-  overflow-y: hidden;
-  z-index: 900;
-  border-radius: 10px;
+.signup:hover{
+    background-color: rgba(30, 144, 255, 0.5);
+    color: orange;
 }
 
 a:hover{
-    color: dodgerblue; 
+    display: block;
+    border-radius: 4px;
+    background:  rgba(30, 144, 255, 0.);
+    
 }
 
-li {
-  margin: 20px 10px;
+a:focus{
+    color: orange;
 }
 
-/* Main Content Area */
-main {
-  margin-top: 80px; /* Clearance for 80px top bar */
-  margin-left: 220px;
-  padding: 20px;
+main{
+    position: static;
+    display: block;
+    width: calc(100vw - 280px);
+    margin-left: 250px;
+    justify-content: space-between;
+}
+
+.box{ 
+    width:200px;
+    height: 200px;
+    margin: 20px;
+    background:rgb(221, 221, 221);
+    display: inline-flex;
+    border-radius: 8px;
+    
+}
+
+
+footer {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 15px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    color: white;
+    height: 70px;
+    position: fixed;
+    bottom: 0px;
+    background: linear-gradient( rgb(195, 103, 154), #1c1c34);
+    left:0px;
+    right:0px;
+}
+
+#playing-image{
+    width: max-content;
+    height: 60px;
+    display: flex;
+    border-radius: 6px;
+}
+
+#music-title{
+    width: max-content;
+    height: auto;
+    display: flex;
+    margin: auto;
+    margin-top: 10px;
+}
+
+#artist-name{
+    width: max-content;
+    height: 20px;
+    display: flex; 
+    margin-bottom: 15px;
+    color: rgb(208, 206, 206);
+}
+
+#music-title:hover, #artist-name:hover{
+    color: white;
+    text-decoration: underline;
+}
+
+.audio-controls{
+  left: 630px;
+  bottom:40px;
+  display: inline-block;
+  justify-content: space-between;
+  align-items: center;
+  bottom: 18px;
+  margin-left: 400px;
+}
+
+.fa-shuffle{
+  margin: 0 20px;
+}
+
+.fa-backward-step{
+  margin: 0 20px;
+}
+
+.fa-pause{
+  margin: 0 20px;
+}
+
+.fa-forward-step{
+  margin: 0 20px;
+}
+
+.fa-repeat{
+  margin: 0 20px;
+}
+
+
+.seekbar {
+    width: 100%;
+    max-width: 300px;
+    min-width: 0;
+    height: 6px;
+    display: block;
+    margin: auto;
+    margin-top: 15px;
+    
+    appearance: none;
+    -webkit-appearance: none;
+
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+
+    --progress: 0%;
+
+    background: linear-gradient(
+        to right,
+        dodgerblue 0%,
+        dodgerblue var(--progress),
+        #ddd var(--progress),
+        #ddd 100%
+    );
+}
+
+/* Chrome, Edge and Safari */
+.seekbar::-webkit-slider-thumb {
+    appearance: none;
+    -webkit-appearance: none;
+
+    width: 14px;
+    height: 14px;
+    border: 2px solid dodgerblue;
+    border-radius: 50%;
+    background: white;
+
+    cursor: pointer;
+}
+
+/* Firefox */
+.seekbar::-moz-range-thumb {
+    width: 12px;
+    height: 12px;
+    border: 2px solid dodgerblue;
+    border-radius: 50%;
+    background: white;
+
+    cursor: pointer;
+}
+
+.fa-bars {
+    margin-left: 350px;
+    margin-bottom:5px;
+    padding: 0px;
+}
+
+
+.volume-control {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    width: max-content;
+    max-width: 100%;
+    margin-left: auto;
+
+    transform: translateY(-4px);
+    flex-shrink: 1;
+}
+
+.volume-icon {
+    color: white;
+    background: transparent;
+    font-size: 16px;
+    line-height: 1;
+}
+
+.volume-bar {
+    width: 100px;
+    height: 4px;
+    margin: 0;
+
+    appearance: none;
+    -webkit-appearance: none;
+
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+
+    --progress: 50%;
+
+    background: linear-gradient(
+        to right,
+        dodgerblue 0%,
+        dodgerblue var(--progress),
+        #ddd var(--progress),
+        #ddd 100%
+    );
+}
+
+/* Chrome, Edge and Safari */
+.volume-bar::-webkit-slider-thumb {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 10px;
+    height: 10px;
+    border: none;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+}
+
+/* Firefox */
+.volume-bar::-moz-range-thumb {
+    width: 10px;
+    height: 10px;
+    border: none;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+}
+
+
+/* Audio-controls alignment guard: keep the controls in the footer's normal flex row.*/
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+    body footer .audio-controls {
+        position: static;
+        left: auto;
+        bottom: auto;
+        display: block;
+        flex: 1 1 300px;
+        width: auto;
+        min-width: 0;
+        max-width: 360px;
+        margin: 0 auto;
+        text-align: center;
+        white-space: nowrap;
+    }
+    body footer .fa-shuffle,
+    body footer .fa-backward-step,
+    body footer .fa-pause,
+    body footer .fa-forward-step,
+    body footer .fa-repeat {
+        margin: 0 8px;
+        font-size: 14px;
+    }
+    body footer .seekbar { max-width: 260px; margin: 8px auto 0; }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    body footer .audio-controls {
+        position: static;
+        left: auto;
+        bottom: auto;
+        display: block;
+        flex: 1 1 220px;
+        width: auto;
+        min-width: 0;
+        max-width: 250px;
+        margin: 0 auto;
+        text-align: center;
+        white-space: nowrap;
+    }
+    body footer .fa-shuffle,
+    body footer .fa-backward-step,
+    body footer .fa-pause,
+    body footer .fa-forward-step,
+    body footer .fa-repeat {
+        margin: 0 4px;
+        font-size: 12px;
+    }
+    body footer .seekbar { max-width: 200px; margin: 6px auto 0; }
+}
+@media screen and (min-width: 481px) and (max-width: 767px) {
+    body footer .audio-controls {
+        position: static;
+        left: auto;
+        bottom: auto;
+        display: block;
+        flex: 1 1 145px;
+        width: auto;
+        min-width: 0;
+        max-width: 165px;
+        margin: 0 auto;
+        text-align: center;
+        white-space: nowrap;
+    }
+    body footer .fa-shuffle,
+    body footer .fa-backward-step,
+    body footer .fa-pause,
+    body footer .fa-forward-step,
+    body footer .fa-repeat {
+        margin: 0 2px;
+        font-size: 10px;
+    }
+    body footer .seekbar { max-width: 140px; margin: 4px auto 0; }
+}
+@media screen and (min-width: 100px) and (max-width: 480px) {
+    body footer .audio-controls {
+        position: static;
+        left: auto;
+        bottom: auto;
+        display: block;
+        flex: 1 1 95px;
+        width: auto;
+        min-width: 0;
+        max-width: 110px;
+        margin: 0 auto;
+        text-align: center;
+        white-space: nowrap;
+    }
+    body footer .fa-shuffle,
+    body footer .fa-backward-step,
+    body footer .fa-pause,
+    body footer .fa-forward-step,
+    body footer .fa-repeat {
+        margin: 0 1px;
+        font-size: 8px;
+    }
+    body footer .seekbar { max-width: 88px; margin: 3px auto 0; }
 }
